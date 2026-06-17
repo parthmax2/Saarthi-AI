@@ -1,4 +1,11 @@
-"""Central configuration: loads .env files and exposes API keys + constants."""
+"""Application configuration for Saarthi AI.
+
+This module loads environment variables from the project root `.env` file
+and the legacy `code/.env` path, then exposes small accessor functions for
+API keys and runtime constants. Keeping provider credentials behind helpers
+lets the rest of the app treat missing optional services as a normal fallback
+case instead of spreading raw environment lookups everywhere.
+"""
 
 import os
 import urllib.parse

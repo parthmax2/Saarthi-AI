@@ -1,14 +1,22 @@
-# secrets — never commit API keys
+# secrets - never commit API keys
 .env
+.env.*
+!.env.example
 code/.env
 checks/
+
 # python
 __pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 venv/
 .venv/
+env/
 *.egg-info/
 dist/
 build/
@@ -28,9 +36,6 @@ devpost.md
 mockups/
 problem.md
 IMPLEMENTATION.md
-
-# tests (not needed for deployment)
-tests/
 
 # scratch / temp files
 test.txt

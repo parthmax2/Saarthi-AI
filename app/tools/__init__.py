@@ -1,7 +1,8 @@
-"""Tool registry: neutral JSON-schema specs + a dispatcher.
+"""Tool registry for Saarthi AI's external-data layer.
 
-The same specs are converted to Gemini FunctionDeclarations or OpenAI-style
-tools by the provider adapters, so tools are defined exactly once.
+The same neutral JSON-schema specs are converted to Gemini FunctionDeclarations
+or OpenAI-style tools by provider adapters, so weather, traffic, geocoding,
+events, advisories, and history tools are defined in one place.
 """
 
 import json

@@ -1,8 +1,11 @@
-"""Orchestrator: runs the full plan pipeline, yielding SSE-friendly events.
+"""Commute-planning orchestration for Saarthi AI.
 
-Data gathering is deterministic and parallel (reliable in a live demo);
-the LLM synthesizes the verdict. agent_ask() is the free-form tool-calling
-agent loop for follow-up questions.
+The orchestrator coordinates the user-facing agent pipeline: geocode both
+endpoints, fan out traffic/weather/festival/event/advisory tools in parallel,
+compute a deterministic risk score, ask the LLM to synthesize the result, and
+yield SSE-friendly progress events along the way. It also exposes the Ask
+Saarthi chat entry points that delegate free-form tool calling to the ADK
+agent implementation.
 """
 
 import logging

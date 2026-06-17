@@ -1,4 +1,9 @@
-"""Geocoding tool — TomTom + Geoapify, hard-biased to Lucknow.
+"""Lucknow-biased geocoding and autocomplete tools.
+
+The primary geocoder is TomTom, with Geoapify as an optional OpenStreetMap-
+based fallback for campuses, institutions, and local places that fuzzy search
+can miss. Every candidate is constrained around Lucknow so the commute planner
+does not silently route to a similarly named place outside the supported city.
 
 Two failure modes guarded here:
 1. TomTom fuzzy search matching the city itself ("Geography" results) and

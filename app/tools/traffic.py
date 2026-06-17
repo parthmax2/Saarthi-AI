@@ -1,8 +1,9 @@
-"""Traffic tools — TomTom routing.
+"""Traffic and routing tools backed by TomTom.
 
-get_route():           one route (optionally with polyline) at a departure time
-compare_departures():  the star tool — sweeps departAt over a window and
-                       returns the full departure-time vs ETA curve.
+`get_route()` retrieves map-ready route alternatives for a specific departure
+time, while `compare_departures()` sweeps TomTom `departAt` requests across a
+window before the arrival deadline. The sweep produces the ETA curve and latest
+safe departure recommendation used by the planner.
 """
 
 import logging

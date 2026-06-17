@@ -1,5 +1,9 @@
-"""Police advisory tool — searches the web for active Lucknow Traffic Police
-route diversions. Best-effort: returns empty on any failure.
+"""Best-effort police advisory search for Lucknow traffic disruptions.
+
+This tool searches recent public web results for Lucknow Traffic Police route
+diversions, closures, and restrictions. Results are treated as weak risk
+signals rather than verified orders, and the tool returns an empty advisory set
+on any network or parsing failure so route planning can continue.
 
 Results are restricted to the past week and clearly labeled as news hits,
 not verified advisories — old festival articles were previously polluting

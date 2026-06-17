@@ -1,5 +1,10 @@
-"""Festival tool — Calendarific (national/state holidays) merged with the
-curated Lucknow calendar (Bada Mangal, Muharram processions, etc.)."""
+"""Festival and holiday risk signals for Lucknow commutes.
+
+Calendarific contributes national and Uttar Pradesh holiday data when an API
+key is configured. The curated Lucknow calendar adds local events such as Bada
+Mangal and Muharram processions, then the combined results are collapsed into
+the impact score consumed by the route planner.
+"""
 
 import logging
 

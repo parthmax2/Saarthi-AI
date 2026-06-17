@@ -1,7 +1,8 @@
-"""Events tool — Ticketmaster Discovery API for Lucknow.
+"""Public event discovery for Lucknow via Ticketmaster.
 
 Coverage in Lucknow is sparse, so failures and empty results are normal;
-the curated festival calendar carries most of the local signal.
+the curated festival calendar carries most of the local signal. Returned events
+are converted into a small commute-risk impact score for the planner.
 """
 
 import logging

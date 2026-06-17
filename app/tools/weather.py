@@ -1,4 +1,10 @@
-"""Weather tool — Open-Meteo (free, no API key)."""
+"""Weather forecast tool backed by Open-Meteo.
+
+The planner asks this module for precipitation, wind, temperature, and weather
+condition summaries over the commute window. Open-Meteo does not require an
+API key, so this tool is expected to be available in local development and in
+the hosted demo.
+"""
 
 from datetime import datetime
 
